@@ -1,3 +1,7 @@
 <h1>How're lads</h1>
 
+{{#each model as |dev|}}
+  {{dev.name}} - {{dev.age}}<br>
+{{/each}}
+
 {{outlet}}
