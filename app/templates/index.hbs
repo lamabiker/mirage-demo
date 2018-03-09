@@ -1,0 +1,12 @@
+<h1>Mirage demo</h1>
+<h2>Devs</h2>
+
+<div class="box">
+  {{#each model as |dev|}}
+    {{#link-to "devs" dev.id class="dev-link"}}
+      {{dev.name}}
+    {{/link-to}}
+  {{/each}}
+</div>
+
+{{outlet}}

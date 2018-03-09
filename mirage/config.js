@@ -25,4 +25,8 @@ export default function() {
   */
 
   this.resource('fe-dev');
+
+  this.get('stats', (schema, request) => {
+    const params = JSON.parse(request.requestBody);
+  })
 }
