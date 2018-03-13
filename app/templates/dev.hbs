@@ -1,0 +1,31 @@
+<h1>{{model.dev.name}}</h1>
+<h2>Demographics</h2>
+
+<div class="box">
+  <ul>
+    <li>Age: {{model.stats.age}}</li>
+    <li>What I do: {{model.stats.catchphrase}}</li>
+    <li>
+      Github stats:
+        <ul>
+          {{#each-in model.stats.github as |key value|}}
+            {{#if (eq key 'issues')}}
+              {{#each-in value as |key value|}}
+                <ul>
+                  <li>{{key}}: {{value}}</li>
+                </ul>
+              {{/each-in}}
+            {{else}}
+              <li>{{key}}: {{value}}</li>
+            {{/if}}
+          {{/each-in}}
+        </ul>
+    </li>
+  </ul>
+</div>
+
+<h3>
+  {{#link-to 'index'}}◀ Back{{/link-to}}
+</h3>
+
+{{outlet}}

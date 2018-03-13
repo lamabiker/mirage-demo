@@ -3,7 +3,7 @@
 
 <div class="box">
   {{#each model as |dev|}}
-    {{#link-to "devs" dev.id class="dev-link"}}
+    {{#link-to "dev" dev.id class="dev-link"}}
       {{dev.name}}
     {{/link-to}}
   {{/each}}

@@ -7,7 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('devs', { path: 'devs/:dev_id', resetNamespace: true });
+  this.route('dev', { path: 'devs/:dev_id' });
 });
 
 export default Router;
