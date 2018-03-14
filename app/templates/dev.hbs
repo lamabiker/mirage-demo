@@ -3,21 +3,24 @@
 
 <div class="box">
   <ul>
-    <li>Age: {{model.stats.age}}</li>
-    <li>What I do: {{model.stats.catchphrase}}</li>
+    <li>Age: <b>{{model.stats.age}}</b></li>
+    <li>What I do: <b>{{model.stats.catchphrase}}</b></li>
     <li>
       Github stats:
         <ul>
           {{#each-in model.stats.github as |key value|}}
-            {{#if (eq key 'issues')}}
-              {{#each-in value as |key value|}}
-                <ul>
-                  <li>{{key}}: {{value}}</li>
-                </ul>
-              {{/each-in}}
-            {{else}}
-              <li>{{key}}: {{value}}</li>
-            {{/if}}
+            <li>
+              {{key}}:
+              {{#if (eq key 'issues')}}
+                {{#each-in value as |key value|}}
+                  <ul>
+                    <li>{{key}}: <b>{{value}}</b></li>
+                  </ul>
+                {{/each-in}}
+              {{else}}
+                <b>{{value}}</b>
+              {{/if}}
+            </li>
           {{/each-in}}
         </ul>
     </li>
