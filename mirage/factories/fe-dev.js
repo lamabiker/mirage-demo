@@ -8,6 +8,14 @@ export default Factory.extend({
 
   age() {
     return Math.round(Math.random() * 99);
+  },
+
+  avatar(i) {
+    return `https://picsum.photos/200/150/?liam=${i}&random`
+  },
+
+  aka() {
+    return faker.internet.userName(2);
   }
 
 });

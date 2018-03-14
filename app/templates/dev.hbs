@@ -1,34 +1,52 @@
-<h1>{{model.dev.name}}</h1>
-<h2>Demographics</h2>
-
-<div class="box">
-  <ul>
-    <li>Age: <b>{{model.stats.age}}</b></li>
-    <li>What I do: <b>{{model.stats.catchphrase}}</b></li>
-    <li>
-      Github stats:
-        <ul>
-          {{#each-in model.stats.github as |key value|}}
-            <li>
-              {{key}}:
-              {{#if (eq key 'issues')}}
-                {{#each-in value as |key value|}}
-                  <ul>
-                    <li>{{key}}: <b>{{value}}</b></li>
-                  </ul>
-                {{/each-in}}
-              {{else}}
-                <b>{{value}}</b>
-              {{/if}}
-            </li>
-          {{/each-in}}
-        </ul>
-    </li>
-  </ul>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">{{model.dev.name}}</h1>
+    <p class="lead">Demographics</p>
+  </div>
 </div>
 
-<h3>
-  {{#link-to 'index'}}◀ Back{{/link-to}}
-</h3>
+<div class="container">
+  <div class="grid">
+    <ul class="list-group">
+      <li class="list-group-item">
+        Age: <b>{{model.stats.age}}</b>
+      </li>
+      <li class="list-group-item">
+        What I do: <b>{{model.stats.catchphrase}}</b>
+      </li>
+      <li class="list-group-item">
+        Github stats:
+          <ul>
+            {{#each-in model.stats.github as |key value|}}
+              <li>
+                {{key}}:
+                {{#if (eq key 'issues')}}
+                  {{#each-in value as |key value|}}
+                    <ul>
+                      <li>{{key}}: <b>{{value}}</b></li>
+                    </ul>
+                  {{/each-in}}
+                {{else}}
+                  <b>{{value}}</b>
+                {{/if}}
+              </li>
+            {{/each-in}}
+          </ul>
+      </li>
+    </ul>
+
+    <div class="text-center">
+      {{random-gif keyword=model.dev.name}}
+    </div>
+  </div>
+
+</div>
+
+<br>
+<br>
+
+<div class="text-center">
+  {{#link-to 'index' class="text-white"}}◀ Back{{/link-to}}
+</div>
 
 {{outlet}}

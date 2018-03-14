@@ -22,4 +22,5 @@ export default function( server ) {
   devs.forEach(name => {
     server.create('fe-dev', { name });
   });
+  
 }

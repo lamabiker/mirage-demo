@@ -14,6 +14,8 @@ module.exports = function(defaults) {
     }
   });
 
+  app.import(`vendor/bootstrap.min.css`,  { destDir: 'assets' });
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
