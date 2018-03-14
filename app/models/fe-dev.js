@@ -6,6 +6,6 @@ export default DS.Model.extend({
   age:   DS.attr('number'),
 
   avatar: DS.attr('string'),
-  aka: DS.attr('string'),
+  aka:    DS.attr('string'),
 
 });
