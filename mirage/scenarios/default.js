@@ -7,20 +7,4 @@ export default function( server ) {
 
   // server.createList('post', 10);
 
-  const devs = [
-    'Agustin',
-    'Bruno',
-    'Cian',
-    'Darren',
-    'Fernando',
-    'Liam',
-    'Mihaela',
-    'Sasha',
-    'Victor'
-  ]
-
-  devs.forEach(name => {
-    server.create('fe-dev', { name });
-  });
-  
 }
