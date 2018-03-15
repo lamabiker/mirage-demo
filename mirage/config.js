@@ -36,7 +36,8 @@ export default function() {
 
   this.get('stats/:id', () => {
 
-    const age = rand(99);
+    const catchphrase = faker.company.bs(5);
+
     const github = {
       branches: rand(1000),
       commits: rand(900000),
@@ -48,8 +49,7 @@ export default function() {
       repos: rand(200),
       stars: rand(50)
     };
-    const catchphrase = faker.company.bs(5)
 
-    return { age, github, catchphrase };
+    return { github, catchphrase };
   })
 }

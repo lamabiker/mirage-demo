@@ -11,7 +11,7 @@ export default Factory.extend({
   },
 
   avatar(i) {
-    return `https://picsum.photos/200/150/?liam=${i}&random`
+    return `https://picsum.photos/200/150/?random=${i}`
   },
 
   aka() {
