@@ -1,7 +1,12 @@
 <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">{{model.dev.name}}</h1>
-    <p class="lead">Demographics</p>
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="text">
+      <h1 class="display-4">{{model.dev.name}}</h1>
+      <p class="lead">Demographics</p>
+    </div>
+    <div class="image">
+      <img class="card-img-top" src="{{model.dev.avatar}}" alt="Loading avatar...">
+    </div>
   </div>
 </div>
 
