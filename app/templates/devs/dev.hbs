@@ -9,7 +9,7 @@
   <div class="grid">
     <ul class="list-group">
       <li class="list-group-item">
-        Age: <b>{{model.stats.age}}</b>
+        Age: <b>{{model.dev.age}}</b>
       </li>
       <li class="list-group-item">
         What I do: <b>{{model.stats.catchphrase}}</b>
@@ -46,7 +46,7 @@
 <br>
 
 <div class="text-center">
-  {{#link-to 'index' class="text-white"}}◀ Back{{/link-to}}
+  {{#link-to 'devs' class="text-white"}}◀ Back{{/link-to}}
 </div>
 
 {{outlet}}

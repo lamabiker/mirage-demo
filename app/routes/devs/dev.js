@@ -9,7 +9,7 @@ export default Route.extend({
 
   model(params) {
     const devId = params.dev_id;
-    const stats = get(this, 'ajax').request( `stats/${devId}` );
+    const stats = get(this, 'ajax').request( `/stats/${devId}` );
 
     return RSVP.hash({
       dev: this.get('store').findRecord('fe-dev', devId),

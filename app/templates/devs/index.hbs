@@ -1,0 +1,28 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Mirage demo</h1>
+    <p class="lead">Here is a list of Front-end developers and their Github statistic</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    {{#each model as |dev|}}
+      <div class="card">
+        <img class="card-img-top" src="{{dev.avatar}}" alt="Loading avatar...">
+        <div class="card-body">
+          <h5 class="card-title">{{dev.name}}</h5>
+          <p class="card-text">
+            <span class="text-italic">{{dev.aka}}</span><br>
+
+          </p>
+          {{#link-to "devs.dev" dev.id class="btn btn-primary"}}
+            Check out stats
+          {{/link-to}}
+        </div>
+      </div>
+    {{/each}}
+
+  </div>
+</div>
