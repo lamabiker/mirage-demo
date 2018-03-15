@@ -4,3 +4,92 @@
     {{!-- <p class="lead">Here is a list of Front-end developers and their Github statistic</p> --}}
   </div>
 </div>
+
+<div class="container">
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <span data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            1. Set up basic API endpoint on Mirage
+          </span>
+        </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          <ul>
+            <li>
+              Telling Mirage about the model/resource in the <code>mirage/config.js</code> file.
+              <pre class="prettyprint lang-js">this.resource('MODEL_NAME');</pre>
+            </li>
+            <li>
+              Generating the <code>mirage-factory</code>:
+              <pre class="prettyprint lang-bash">$ ember g mirage-factory RESOURCE_NAME</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <span data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            2. Seeding the Mirage db (schema)
+          </span>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+          <ul>
+            <li>
+              Creating the scenario in <code>mirage/scenarios/scenario.js</code>
+              with: <pre class="prettyprint lang-js">server.create('RESOURCE_NAME')</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <span data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            3. Faking a custom API (non json-api) call
+          </span>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+          <ul>
+            <li>
+              Tell Mirage how to handle specific routes/endpoints:
+              <pre class="prettyprint lang-js">this.get('stats/:id', ( /* schema, db */ ) => {
+  return {};
+});</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h5 class="mb-0">
+          <span data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            4. Handling external API/endpoint calls
+          </span>
+        </h5>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+        <div class="card-body">
+          <ul>
+            <li>
+              <p>By default, Mirage will intercept all ajax calls, but we can tell it to let some through, i.e. external API endpoints</p>
+              <p>Here we're calling the Giphy API, so we have to tell Mirage to let it though.</p>
+              <pre class="prettyprint lang-js">this.passthrough('https://api.giphy.com/**')</pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

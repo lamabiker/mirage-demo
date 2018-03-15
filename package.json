@@ -38,6 +38,7 @@
     "ember-cli-test-loader": "^1.1.0",
     "ember-cli-uglify": "^2.0.0",
     "ember-cli-yadda": "^0.2.1",
+    "ember-code-prettify": "0.0.1",
     "ember-data": "~2.16.2",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
