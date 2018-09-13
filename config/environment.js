@@ -3,7 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'mirage-demo',
+    modulePrefix: 'mirage-demo-ex',
     environment,
     rootURL: '/',
     locationType: 'auto',

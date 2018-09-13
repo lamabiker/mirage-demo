@@ -1,4 +1,4 @@
-# mirage-demo
+# mirage-demo-ex
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
@@ -15,7 +15,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd mirage-demo`
+* `cd mirage-demo-ex`
 * `npm install`
 
 ## Running / Development
